@@ -70,7 +70,7 @@ Fact* FactGroup::getFact(const QString& name)
     }
 
     Fact*   fact =          nullptr;
-    QString camelCaseName = _camelCase(name);
+    QString camelCaseName = name;
 
     if (_nameToFactMap.contains(camelCaseName)) {
         fact = _nameToFactMap[camelCaseName];
@@ -85,7 +85,7 @@ Fact* FactGroup::getFact(const QString& name)
 FactGroup* FactGroup::getFactGroup(const QString& name)
 {
     FactGroup*  factGroup = nullptr;
-    QString     camelCaseName = _camelCase(name);
+    QString     camelCaseName = name;
 
     if (_nameToFactGroupMap.contains(camelCaseName)) {
         factGroup = _nameToFactGroupMap[camelCaseName];
